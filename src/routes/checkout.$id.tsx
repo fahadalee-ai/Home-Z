@@ -52,7 +52,7 @@ function Checkout() {
           You're all <span className="text-gradient-gold">set</span>
         </h1>
         <p className="mt-3 text-sm text-muted-foreground">
-          Your item is secured in our vault and will ship with white-glove insured delivery.
+          Your property is secured in escrow and closing support will reach out within 24 hours.
         </p>
         <img src={a.image} alt="" className="mt-6 h-36 w-36 rounded-2xl object-cover border border-border" />
         <p className="mt-3 text-xs font-semibold">{a.title}</p>
@@ -110,7 +110,7 @@ function Checkout() {
             <p className="text-xs font-semibold">Alexander Chen</p>
             <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">{address}</p>
             <p className="mt-1 flex items-center gap-1 text-[10px] text-primary">
-              <Truck className="h-3 w-3" /> Free insured white-glove shipping
+              <Truck className="h-3 w-3" /> Escrow-protected closing
             </p>
           </div>
           <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground" />
@@ -156,7 +156,7 @@ function Checkout() {
       <p className="mt-4 flex items-center justify-center gap-1.5 text-[10px] text-muted-foreground">
         <Lock className="h-3 w-3 text-primary" />
         <ShieldCheck className="h-3 w-3 text-primary" />
-        Encrypted checkout · Authenticated & insured
+        Encrypted checkout · Verified & escrow protected
       </p>
 
       <div className="fixed inset-x-0 bottom-0 z-40 mx-auto max-w-[440px] border-t border-border bg-background/95 px-5 py-3 backdrop-blur">

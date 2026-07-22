@@ -1,10 +1,9 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Home, Gavel, ShoppingBag, LayoutGrid, User } from "lucide-react";
+import { Home, Gavel, LayoutGrid, User } from "lucide-react";
 
 const tabs = [
   { to: "/home", label: "Home", icon: Home },
   { to: "/auctions", label: "Auctions", icon: Gavel },
-  { to: "/shop", label: "Shop", icon: ShoppingBag },
   { to: "/dashboard", label: "Dashboard", icon: LayoutGrid },
   { to: "/profile", label: "Profile", icon: User },
 ] as const;

@@ -11,7 +11,7 @@ export const Route = createFileRoute("/auction/$id")({
   }),
   head: ({ params }) => {
     const a = getAuction(params.id);
-    return { meta: [{ title: a ? `${a.title} — Supreme Signatures` : "Auction" }] };
+    return { meta: [{ title: a ? `${a.title} — Home Z` : "Auction" }] };
   },
   loader: ({ params }) => {
     const a = getAuction(params.id);
@@ -69,7 +69,7 @@ function AuctionDetail() {
 
         <div className="absolute bottom-5 left-5 flex items-center gap-1.5 rounded-full bg-black/70 px-3 py-1.5 backdrop-blur">
           <ShieldCheck className="h-3.5 w-3.5 text-primary" />
-          <span className="text-[10px] font-semibold uppercase tracking-widest text-primary">100% Authenticated Guaranteed</span>
+          <span className="text-[10px] font-semibold uppercase tracking-widest text-primary">Verified Listing Guaranteed</span>
         </div>
       </div>
 
@@ -122,7 +122,7 @@ function AuctionDetail() {
         {locked && (
           <div className="mt-3 flex items-center gap-2 rounded-xl border border-primary/30 bg-primary/5 px-3 py-2.5 text-[11px] text-primary">
             <Lock className="h-3.5 w-3.5 shrink-0" />
-            This lot is in preview. Bidding unlocks when the live auction begins.
+            This listing is in preview. Bidding unlocks when the live auction begins.
           </div>
         )}
 
@@ -142,9 +142,9 @@ function AuctionDetail() {
 
         {tab === "overview" ? (
           <div className="mt-5 space-y-5 text-sm text-muted-foreground">
-            <p>An icon of the game's golden era. This piece is fully authenticated with chain-of-custody documentation, accompanied by photo-matched evidence and stored in our climate-controlled vault.</p>
+            <p>A standout property in a prime location. This listing is fully verified with clear title documentation, recent inspection reports, and professional photography. Schedule a private tour or bid live during the auction window.</p>
             <div className="grid grid-cols-2 gap-3">
-              {[["Condition", "Mint"], ["Year", "1996"], ["COA", "PSA/DNA"], ["Vault", "Insured"]].map(([k, v]) => (
+              {[["Condition", "Move-in Ready"], ["Built", "2019"], ["Title", "Clear"], ["Insurance", "Available"]].map(([k, v]) => (
                 <div key={k} className="rounded-2xl border border-border bg-surface p-3">
                   <p className="text-[10px] uppercase tracking-widest text-muted-foreground">{k}</p>
                   <p className="mt-1 font-semibold text-foreground">{v}</p>

@@ -3,7 +3,7 @@ import { ChevronRight, User, MapPin, CreditCard, Bell, Shield, Lock, HelpCircle,
 import { BottomNav } from "@/components/BottomNav";
 
 export const Route = createFileRoute("/profile")({
-  head: () => ({ meta: [{ title: "Profile — Supreme Signatures" }] }),
+  head: () => ({ meta: [{ title: "Profile — Home Z" }] }),
   component: Profile,
 });
 
@@ -35,7 +35,7 @@ function Profile() {
           <div className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-gradient-gold text-xl font-bold text-primary-foreground font-display">AC</div>
           <div className="min-w-0">
             <p className="truncate font-display text-lg font-bold">Alexander Chen</p>
-            <p className="truncate text-xs text-muted-foreground">alex.chen@supreme.com</p>
+            <p className="truncate text-xs text-muted-foreground">alex.chen@propz.com</p>
             <div className="mt-1.5 inline-flex items-center gap-1 rounded-full border border-primary/40 bg-black/30 px-2 py-0.5 text-[10px] text-primary">
               <Award className="h-3 w-3" /> Platinum Bidder
             </div>

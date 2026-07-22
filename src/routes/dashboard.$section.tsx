@@ -7,7 +7,7 @@ import { AUCTIONS } from "@/lib/auction-data";
 export const Route = createFileRoute("/dashboard/$section")({
   head: ({ params }) => {
     const item = getDashboardItem(params.section);
-    return { meta: [{ title: `${item?.label ?? "Dashboard"} — Supreme Signatures` }] };
+    return { meta: [{ title: `${item?.label ?? "Dashboard"} — Home Z` }] };
   },
   loader: ({ params }) => {
     const item = getDashboardItem(params.section);
@@ -42,7 +42,7 @@ function Section() {
           <Icon className="h-5 w-5" />
         </span>
         <div className="min-w-0">
-          <p className="text-[10px] uppercase tracking-widest text-primary">Supreme Signatures</p>
+          <p className="text-[10px] uppercase tracking-widest text-primary">Home Z</p>
           <p className="text-xs text-muted-foreground">{item.description}</p>
         </div>
       </div>
@@ -155,7 +155,7 @@ function SectionBody({ slug }: { slug: string }) {
   if (slug === "messages") {
     const threads = [
       { from: "Marcus Reid", msg: "Your Rolex bid was matched.", time: "2m" },
-      { from: "Support", msg: "Authentication complete on lot #142.", time: "1h" },
+      { from: "Support", msg: "Title verification complete on listing #142.", time: "1h" },
       { from: "Sophie L.", msg: "Interested in your consignment?", time: "Yesterday" },
     ];
     return (

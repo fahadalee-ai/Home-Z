@@ -3,7 +3,7 @@ import { LayoutDashboard, ArrowLeft } from "lucide-react";
 import { Logo } from "@/components/Logo";
 
 export const Route = createFileRoute("/admin")({
-  head: () => ({ meta: [{ title: "Admin Dashboard — Supreme Signatures" }] }),
+  head: () => ({ meta: [{ title: "Admin Dashboard — Home Z" }] }),
   component: AdminDashboardPlaceholder,
 });
 
@@ -13,7 +13,7 @@ function AdminDashboardPlaceholder() {
       <span className="mb-6 grid h-16 w-16 place-items-center rounded-2xl bg-primary/10 text-primary">
         <LayoutDashboard className="h-7 w-7" />
       </span>
-      <Logo className="mb-6 h-12 w-auto" />
+      <Logo className="mb-6 h-12 w-auto" showName nameClassName="font-display text-xl font-bold tracking-tight" />
       <h1 className="font-display text-2xl font-bold text-white">
         Admin <span className="text-gradient-gold">Dashboard</span>
       </h1>

@@ -17,9 +17,9 @@ function NotFoundComponent() {
     <div className="flex min-h-screen items-center justify-center px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-gradient-gold">404</h1>
-        <h2 className="mt-4 text-xl font-semibold">Lot not found</h2>
+        <h2 className="mt-4 text-xl font-semibold">Listing not found</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          This auction may have ended or the page has moved.
+          This property auction may have ended or the page has moved.
         </p>
         <Link to="/home" className="mt-6 inline-flex rounded-full bg-gradient-gold px-6 py-3 text-sm font-semibold text-primary-foreground">
           Back to Home
@@ -52,11 +52,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
-      { name: "theme-color", content: "#0D0D0D" },
-      { title: "Supreme Signatures — Bid. Win. Own Legends." },
-      { name: "description", content: "Premium auction marketplace for authenticated memorabilia, luxury watches, and exclusive collectibles. Live video auctions with proxy bidding." },
-      { property: "og:title", content: "Supreme Signatures" },
-      { property: "og:description", content: "Bid. Win. Own Legends. Authenticated luxury memorabilia auctions." },
+      { name: "theme-color", content: "#0f0f0f" },
+      { title: "Home Z — The New Speed of Real Estate" },
+      { name: "description", content: "Premium property auction marketplace for homes, villas, condos, and investment real estate. Live video auctions with proxy bidding." },
+      { property: "og:title", content: "Home Z" },
+      { property: "og:description", content: "The new speed of real estate. Bid live on premium homes and properties." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

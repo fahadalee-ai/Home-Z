@@ -6,14 +6,14 @@ import liveStream from "@/assets/live-stream.jpg";
 import celebration from "@/assets/onboarding-3.jpg";
 
 export const Route = createFileRoute("/onboarding")({
-  head: () => ({ meta: [{ title: "Welcome — Supreme Signatures" }] }),
+  head: () => ({ meta: [{ title: "Welcome — Home Z" }] }),
   component: Onboarding,
 });
 
 const slides = [
-  { img: jersey, title: "Own Rare & Exclusive Collectibles", desc: "Bid on authenticated memorabilia and exclusive collectibles curated by experts." },
-  { img: liveStream, title: "Join Live Auctions", desc: "Watch industry experts showcase legendary items and bid in real time." },
-  { img: celebration, title: "Win With Smart Auto Bidding", desc: "Set your maximum bid — our proxy bidding system works for you, even while you sleep." },
+  { img: jersey, title: "Discover Premium Homes & Estates", desc: "Browse verified listings — villas, condos, and investment properties curated by Home Z specialists." },
+  { img: liveStream, title: "Join Live Property Auctions", desc: "Tour homes with agents on camera and place bids in real time from anywhere." },
+  { img: celebration, title: "Win With Smart Auto Bidding", desc: "Set your maximum offer — our proxy bidding system works for you, even while you sleep." },
 ];
 
 function Onboarding() {

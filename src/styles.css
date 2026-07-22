@@ -40,36 +40,37 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --shadow-gold: 0 8px 28px -10px color-mix(in oklab, var(--primary) 50%, transparent);
+  --shadow-gold: 0 8px 28px -10px color-mix(in oklab, #c02328 45%, #f6d51b);
   --shadow-elevated: 0 16px 48px -20px rgba(0,0,0,0.8);
 }
 
 :root, .dark {
-  --background: oklch(0.13 0 0);
-  --foreground: oklch(1 0 0);
-  --surface: oklch(0.17 0 0);
-  --surface-2: oklch(0.22 0 0);
-  --card: oklch(0.17 0 0);
-  --card-foreground: oklch(1 0 0);
-  --popover: oklch(0.17 0 0);
-  --popover-foreground: oklch(1 0 0);
-  --primary: oklch(0.78 0.13 86);
-  --primary-foreground: oklch(0.13 0 0);
-  --primary-soft: oklch(0.85 0.11 86);
-  --secondary: oklch(0.22 0 0);
-  --secondary-foreground: oklch(1 0 0);
-  --muted: oklch(0.22 0 0);
-  --muted-foreground: oklch(0.82 0 0);
-  --accent: oklch(0.78 0.13 86);
-  --accent-foreground: oklch(0.13 0 0);
-  --destructive: oklch(0.62 0.22 25);
-  --destructive-foreground: oklch(1 0 0);
-  --success: oklch(0.7 0.17 152);
-  --success-foreground: oklch(0.13 0 0);
-  --live: oklch(0.63 0.24 25);
-  --border: oklch(1 0 0 / 8%);
-  --input: oklch(1 0 0 / 10%);
-  --ring: oklch(0.78 0.13 86);
+  /* PROPZ brand: #f6d51b yellow · #c02328 red */
+  --background: #0f0f0f;
+  --foreground: #ffffff;
+  --surface: #1a1a1a;
+  --surface-2: #242424;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --popover: #1a1a1a;
+  --popover-foreground: #ffffff;
+  --primary: #f6d51b;
+  --primary-foreground: #1a1a1a;
+  --primary-soft: #f9e45a;
+  --secondary: #242424;
+  --secondary-foreground: #ffffff;
+  --muted: #242424;
+  --muted-foreground: #c8c8c8;
+  --accent: #c02328;
+  --accent-foreground: #ffffff;
+  --destructive: #c02328;
+  --destructive-foreground: #ffffff;
+  --success: #3dbb6e;
+  --success-foreground: #0f0f0f;
+  --live: #c02328;
+  --border: rgb(255 255 255 / 8%);
+  --input: rgb(255 255 255 / 10%);
+  --ring: #f6d51b;
   --radius: 10px;
 }
 
@@ -80,8 +81,8 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     background:
-      radial-gradient(1200px 600px at 80% -10%, color-mix(in oklab, var(--primary) 8%, transparent), transparent 60%),
-      radial-gradient(900px 500px at -10% 110%, color-mix(in oklab, var(--primary) 6%, transparent), transparent 60%),
+      radial-gradient(1200px 600px at 80% -10%, color-mix(in oklab, #f6d51b 10%, transparent), transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, color-mix(in oklab, #c02328 8%, transparent), transparent 60%),
       var(--color-background);
     min-height: 100vh;
   }
@@ -89,15 +90,22 @@
 }
 
 @layer utilities {
+  /* Pure PROPZ yellow → red (no amber/gold midtones) */
   .text-gradient-gold {
-    background: linear-gradient(135deg, #E6C66A 0%, #D4AF37 45%, #B8862B 100%);
+    background: linear-gradient(90deg, #f6d51b 0%, #c02328 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
   }
   .bg-gradient-gold {
-    background: linear-gradient(135deg, #E6C66A 0%, #D4AF37 50%, #B8862B 100%);
+    background: linear-gradient(90deg, #f6d51b 0%, #f6d51b 28%, #c02328 100%);
+  }
+  .bg-gradient-brand {
+    background: linear-gradient(90deg, #f6d51b 0%, #c02328 100%);
+  }
+  .bg-gradient-brand-soft {
+    background: linear-gradient(180deg, color-mix(in oklab, #f6d51b 18%, transparent), color-mix(in oklab, #c02328 12%, transparent));
   }
   .border-gold { border-color: var(--color-primary); }
   .glass {
@@ -107,21 +115,21 @@
     border: 1px solid rgba(255,255,255,0.08);
   }
   .glass-gold {
-    background: linear-gradient(180deg, rgba(212,175,55,0.10), rgba(212,175,55,0.02));
-    border: 1px solid rgba(212,175,55,0.25);
+    background: linear-gradient(135deg, rgba(246,213,27,0.14), rgba(192,35,40,0.10));
+    border: 1px solid color-mix(in oklab, #f6d51b 35%, #c02328);
   }
   .hide-scrollbar::-webkit-scrollbar { display: none; }
   .hide-scrollbar { scrollbar-width: none; }
 
   .shimmer {
-    background: linear-gradient(110deg, transparent 30%, rgba(212,175,55,0.18) 50%, transparent 70%);
+    background: linear-gradient(110deg, transparent 25%, rgba(246,213,27,0.25) 45%, rgba(192,35,40,0.2) 55%, transparent 75%);
     background-size: 200% 100%;
     animation: shimmer 2.4s linear infinite;
   }
   @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
   @keyframes pulse-gold {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(212,175,55,0.5); }
-    50% { box-shadow: 0 0 0 14px rgba(212,175,55,0); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(192,35,40,0.45); }
+    50% { box-shadow: 0 0 0 14px rgba(246,213,27,0); }
   }
   .pulse-gold { animation: pulse-gold 2s infinite; }
   @keyframes pulse-live { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }

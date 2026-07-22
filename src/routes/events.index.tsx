@@ -6,7 +6,7 @@ import { LIVE_EVENTS, type EventStatus, type LiveEvent } from "@/lib/auction-dat
 import { useCountdown } from "@/lib/use-countdown";
 
 export const Route = createFileRoute("/events/")({
-  head: () => ({ meta: [{ title: "Live Stream Auctions — Supreme Signatures" }] }),
+  head: () => ({ meta: [{ title: "Live Stream Auctions — Home Z" }] }),
   component: Events,
 });
 

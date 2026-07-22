@@ -4,7 +4,7 @@ import { BottomNav } from "@/components/BottomNav";
 import { DASHBOARD_ITEMS } from "@/lib/dashboard-items";
 
 export const Route = createFileRoute("/dashboard/")({
-  head: () => ({ meta: [{ title: "Dashboard — Supreme Signatures" }] }),
+  head: () => ({ meta: [{ title: "Dashboard — Home Z" }] }),
   component: Dashboard,
 });
 
@@ -12,9 +12,9 @@ function Dashboard() {
   return (
     <div className="mx-auto min-h-screen max-w-[440px] px-5 pb-28 pt-10">
       <h1 className="text-2xl font-bold">
-        Your <span className="text-gradient-gold">Vault</span>
+        Your <span className="text-gradient-gold">Hub</span>
       </h1>
-      <p className="mt-1 text-xs text-muted-foreground">Everything you need to bid, win, and sell.</p>
+      <p className="mt-1 text-xs text-muted-foreground">Everything you need to bid, buy, and sell homes.</p>
 
       <div className="mt-5 grid grid-cols-3 gap-2">
         {[["Active", "4"], ["Won", "12"], ["Watching", "21"]].map(([l, v]) => (

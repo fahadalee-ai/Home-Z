@@ -302,7 +302,7 @@ function UpcomingDetail({ e }: { e: LiveEvent }) {
             </div>
             <div className="min-w-0 flex-1">
               <p className="text-sm font-semibold">{e.host}</p>
-              <p className="text-[11px] text-muted-foreground">Verified Supreme Host</p>
+              <p className="text-[11px] text-muted-foreground">Verified Home Z Host</p>
             </div>
             <span className="flex items-center gap-1 rounded-md bg-primary/10 px-2 py-1 text-[10px] font-semibold text-primary">
               <Star className="h-3 w-3 fill-primary" /> {e.hostRating.toFixed(1)}
@@ -311,8 +311,8 @@ function UpcomingDetail({ e }: { e: LiveEvent }) {
           <div className="mt-3 grid grid-cols-3 gap-2 text-center">
             {[
               ["Sales", "1.2k"],
-              ["Ships", "24h"],
-              ["COA", "100%"],
+              ["Tours", "Live"],
+              ["Title", "Clear"],
             ].map(([k, v]) => (
               <div key={k} className="rounded-lg border border-border bg-background p-2">
                 <p className="font-display text-sm font-bold text-gradient-gold">{v}</p>
@@ -321,7 +321,7 @@ function UpcomingDetail({ e }: { e: LiveEvent }) {
             ))}
           </div>
           <p className="mt-3 text-[11px] leading-relaxed text-muted-foreground">
-            All lots are authenticated, photo-matched where applicable, and stored in climate-controlled vaults before insured shipping.
+            All listings are verified with clear title packages, recent inspections, and professional photography before going live.
           </p>
         </div>
 
@@ -331,8 +331,8 @@ function UpcomingDetail({ e }: { e: LiveEvent }) {
           {[
             "Bidding opens only when the live stream starts.",
             "All bids are binding once placed during the live event.",
-            "Winning lots require checkout within 24 hours.",
-            "Authentication guarantee and 14-day return on eligible items.",
+            "Winning listings require checkout within 24 hours.",
+            "Title verification guarantee and escrow protection on every sale.",
           ].map((rule) => (
             <div key={rule} className="flex gap-2 text-[11px] text-muted-foreground">
               <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary" />
@@ -658,7 +658,7 @@ function LotsList({
             <p className="text-[9px] uppercase tracking-widest text-primary">{a.category}</p>
             <p className="line-clamp-1 text-xs font-semibold">{a.title}</p>
             <p className="mt-0.5 flex items-center gap-1 text-[9px] text-muted-foreground">
-              <ShieldCheck className="h-2.5 w-2.5 text-primary" /> Authenticated
+              <ShieldCheck className="h-2.5 w-2.5 text-primary" /> Verified
             </p>
             <p className="mt-1 text-sm font-bold leading-none text-gradient-gold">${a.currentBid.toLocaleString()}</p>
           </div>

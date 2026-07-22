@@ -6,7 +6,7 @@ import { AUCTIONS, type Auction, type BidStatus } from "@/lib/auction-data";
 import { useCountdown } from "@/lib/use-countdown";
 
 export const Route = createFileRoute("/my-bids")({
-  head: () => ({ meta: [{ title: "My Bids — Supreme Signatures" }] }),
+  head: () => ({ meta: [{ title: "My Bids — Home Z" }] }),
   component: MyBids,
 });
 

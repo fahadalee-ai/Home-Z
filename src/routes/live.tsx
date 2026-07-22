@@ -28,7 +28,7 @@ export const Route = createFileRoute("/live")({
   validateSearch: (search: Record<string, unknown>) => ({
     event: typeof search.event === "string" ? search.event : undefined,
   }),
-  head: () => ({ meta: [{ title: "Live Auction — Supreme Signatures" }] }),
+  head: () => ({ meta: [{ title: "Live Auction — Home Z" }] }),
   component: Live,
 });
 
@@ -490,7 +490,7 @@ function Confetti() {
     id: i,
     left: (i * 37) % 100,
     delay: (i % 8) * 0.12,
-    color: i % 3 === 0 ? "#D4AF37" : i % 3 === 1 ? "#E6C66A" : "#ffffff",
+    color: i % 3 === 0 ? "#f6d51b" : i % 3 === 1 ? "#c02328" : "#ffffff",
   }));
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">

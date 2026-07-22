@@ -6,7 +6,7 @@ import { AUCTIONS, FILTER_CATEGORIES, type Auction, type BidStatus } from "@/lib
 import { useCountdown } from "@/lib/use-countdown";
 
 export const Route = createFileRoute("/auctions")({
-  head: () => ({ meta: [{ title: "Active Auctions — Supreme Signatures" }] }),
+  head: () => ({ meta: [{ title: "Active Auctions — Home Z" }] }),
   component: Auctions,
 });
 
@@ -111,7 +111,7 @@ function Row({ a }: { a: Auction }) {
           </div>
           <h3 className="mt-1 line-clamp-1 text-xs font-semibold">{a.title}</h3>
           <p className="mt-0.5 flex items-center gap-1 text-[9px] text-muted-foreground">
-            <ShieldCheck className="h-2.5 w-2.5 text-primary" /> Authenticated · {a.totalBids} bids
+            <ShieldCheck className="h-2.5 w-2.5 text-primary" /> Verified · {a.totalBids} bids
           </p>
         </div>
         <div className="flex items-end justify-between">

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ArrowLeft, ArrowRight, Check, Shield, CreditCard, MapPin, User, Sparkles } from "lucide-react";
 
 export const Route = createFileRoute("/register")({
-  head: () => ({ meta: [{ title: "Create Account — Supreme Signatures" }] }),
+  head: () => ({ meta: [{ title: "Create Account — Home Z" }] }),
   component: Register,
 });
 
@@ -16,13 +16,13 @@ const STEPS = [
 ];
 
 const INTERESTS = [
-  "Sports Memorabilia", "Signed Jerseys", "Signed Balls", "Trading Cards",
-  "Collectibles", "Luxury Watches", "Art", "Electronics", "Fashion", "Rare Items",
+  "Luxury Villas", "Modern Homes", "Penthouses", "Condos",
+  "Mountain Homes", "Waterfront", "Investment Properties", "Starter Homes", "Townhomes", "Vacation Homes",
 ];
 
 function Register() {
   const [step, setStep] = useState(1);
-  const [interests, setInterests] = useState<string[]>(["Signed Jerseys", "Luxury Watches"]);
+  const [interests, setInterests] = useState<string[]>(["Luxury Villas", "Modern Homes"]);
   const [terms, setTerms] = useState({ tos: false, privacy: false });
   const navigate = useNavigate();
 
@@ -109,7 +109,7 @@ function Personal() {
 function Address() {
   return (
     <>
-      <StepHeader title="Address Information" sub="Where should we ship your winnings?" />
+      <StepHeader title="Address Information" sub="Where should we send closing documents?" />
       <div className="space-y-3">
         <I placeholder="Street address" />
         <div className="grid grid-cols-2 gap-3">
@@ -128,7 +128,7 @@ function Address() {
 function Interests({ selected, onToggle }: { selected: string[]; onToggle: (i: string) => void }) {
   return (
     <>
-      <StepHeader title="Auction Interests" sub="Pick categories to personalize your feed." />
+      <StepHeader title="Property Interests" sub="Pick categories to personalize your feed." />
       <div className="grid grid-cols-2 gap-3">
         {INTERESTS.map((i) => {
           const on = selected.includes(i);
@@ -159,7 +159,7 @@ function Payment() {
     <>
       <StepHeader title="Add Payment Method" sub="Securely stored for seamless checkout." />
       <div className="glass-gold mb-4 rounded-2xl p-4 text-xs text-muted-foreground">
-        Your card is encrypted and never shared. Used only when you win an auction.
+        Your card is encrypted and never shared. Used only when you win a property auction.
       </div>
       <div className="space-y-3">
         <I placeholder="Cardholder name" />
@@ -180,11 +180,11 @@ function Payment() {
 function Verify({ terms, setTerms }: { terms: { tos: boolean; privacy: boolean }; setTerms: (t: any) => void }) {
   return (
     <>
-      <StepHeader title="Almost there" sub="Review and accept to start bidding." />
+      <StepHeader title="Almost there" sub="Review and accept to start bidding on homes." />
       <div className="space-y-3">
         <label className="flex items-start gap-3 rounded-2xl border border-border bg-surface p-4 text-sm">
           <input type="checkbox" checked={terms.tos} onChange={(e) => setTerms({ ...terms, tos: e.target.checked })} className="mt-1 accent-[color:var(--primary)]" />
-          <span>I accept the <span className="text-primary">Terms & Conditions</span> of Supreme Signatures, including auction bidding rules.</span>
+          <span>I accept the <span className="text-primary">Terms & Conditions</span> of Home Z, including property auction bidding rules.</span>
         </label>
         <label className="flex items-start gap-3 rounded-2xl border border-border bg-surface p-4 text-sm">
           <input type="checkbox" checked={terms.privacy} onChange={(e) => setTerms({ ...terms, privacy: e.target.checked })} className="mt-1 accent-[color:var(--primary)]" />
@@ -192,7 +192,7 @@ function Verify({ terms, setTerms }: { terms: { tos: boolean; privacy: boolean }
         </label>
         <div className="glass rounded-2xl p-4 text-xs text-muted-foreground">
           <Shield className="mb-2 h-4 w-4 text-primary" />
-          Every account is verified to keep the auction house secure and authentic.
+          Every account is verified to keep Home Z auctions secure and trusted.
         </div>
       </div>
     </>

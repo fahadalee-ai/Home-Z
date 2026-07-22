@@ -4,7 +4,7 @@ import { Mail, Lock, Eye, EyeOff, Apple, Chrome } from "lucide-react";
 import { Logo } from "@/components/Logo";
 
 export const Route = createFileRoute("/login")({
-  head: () => ({ meta: [{ title: "Sign In — Supreme Signatures" }] }),
+  head: () => ({ meta: [{ title: "Sign In — Home Z" }] }),
   component: Login,
 });
 
@@ -16,14 +16,14 @@ function Login() {
       <div className="absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-primary/15 to-transparent" />
       <div className="relative mx-auto flex min-h-screen max-w-[440px] flex-col px-6 py-12">
         <div className="flex flex-col items-center gap-3">
-          <Logo className="h-16 w-auto" />
+          <Logo className="h-16 w-auto" showName nameClassName="font-display text-2xl font-bold tracking-tight" />
         </div>
 
         <div className="mt-10 space-y-1">
           <h1 className="font-display text-4xl font-bold">
             Welcome <span className="text-gradient-gold">Back</span>
           </h1>
-          <p className="text-sm text-muted-foreground">Sign in to continue bidding on legends.</p>
+          <p className="text-sm text-muted-foreground">Sign in to continue bidding on homes.</p>
         </div>
 
         <form
@@ -62,7 +62,7 @@ function Login() {
         </div>
 
         <p className="mt-auto pt-10 text-center text-sm text-muted-foreground">
-          New to Supreme Signatures?{" "}
+          New to Home Z?{" "}
           <Link to="/register" className="font-semibold text-primary">Create account</Link>
         </p>
       </div>

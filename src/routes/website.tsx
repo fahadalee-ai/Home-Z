@@ -3,7 +3,7 @@ import { Globe, ArrowLeft } from "lucide-react";
 import { Logo } from "@/components/Logo";
 
 export const Route = createFileRoute("/website")({
-  head: () => ({ meta: [{ title: "User Website — Supreme Signatures" }] }),
+  head: () => ({ meta: [{ title: "User Website — Home Z" }] }),
   component: UserWebsitePlaceholder,
 });
 
@@ -13,7 +13,7 @@ function UserWebsitePlaceholder() {
       <span className="mb-6 grid h-16 w-16 place-items-center rounded-2xl bg-primary/10 text-primary">
         <Globe className="h-7 w-7" />
       </span>
-      <Logo className="mb-6 h-12 w-auto" />
+      <Logo className="mb-6 h-12 w-auto" showName nameClassName="font-display text-xl font-bold tracking-tight" />
       <h1 className="font-display text-2xl font-bold text-white">
         User <span className="text-gradient-gold">Website</span>
       </h1>
